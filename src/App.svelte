@@ -5,6 +5,11 @@
     { id: 3, name: "sugar", done: false }
   ];
 
+  let name = "";
+  const addItem = () => {
+    items = [...items, { id: Math.random, name, done: false }];
+    name = "";
+  };
   const remove = item => {
     items = items.filter(i => i !== item);
   };
@@ -36,4 +41,9 @@
       </li>
     {/each}
   </ul>
+
+  <form on:submit|preventDefault={addItem}>
+    <label for="name">Add an item</label>
+    <input type="text" bind:value={name} />
+  </form>
 </div>
