@@ -16,12 +16,57 @@
 </script>
 
 <style>
+  body {
+    font-size: 1.8em;
+    font-weight: 400;
+  }
+  .container {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 4px;
+    transition: 0.15s all;
+    margin-bottom: 0.5em;
+    display: flex;
+    justify-content: center;
+  }
+  .inner-container {
+    max-width: 300px;
+  }
+
+  #name {
+    width: 100%;
+  }
+  ul {
+    padding-left: 0;
+  }
+  li {
+    list-style: none;
+    padding: 6px 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 1rem;
+  }
+  input[type="text"] {
+    outline: none;
+    margin: 0;
+  }
+  input[type="checkbox"] {
+    margin: 0 10px 0 0;
+  }
+  label {
+    display: block;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    color: #777;
+  }
   li button {
-    border: 1px solid black;
+    float: right;
+    border: none;
     background: transparent;
-    padding: 2px;
-    margin: 2px;
-    color: purple;
+    padding: 0;
+    margin: 0;
+    color: #dc4f21;
+    font-size: 18px;
+    cursor: pointer;
   }
 
   .done span {
@@ -29,21 +74,22 @@
   }
 </style>
 
-<div>
-  <h1>Things to buy</h1>
+<div class="container">
+  <div class="inner-container">
+    <h1>Grocery List</h1>
+    <form on:submit|preventDefault={addItem}>
+      <label for="name">Add an item</label>
+      <input id="name" type="text" bind:value={name} />
+    </form>
+    <ul>
+      {#each items as item}
+        <li class={item.done ? 'done' : ''}>
+          <input type="checkbox" bind:checked={item.done} />
+          <span>{item.name}</span>
+          <button on:click={() => remove(item)}>X</button>
+        </li>
+      {/each}
+    </ul>
+  </div>
 
-  <ul>
-    {#each items as item}
-      <li class={item.done ? 'done' : ''}>
-        <span>{item.name}</span>
-        <input type="checkbox" bind:checked={item.done} />
-        <button on:click={() => remove(item)}>X</button>
-      </li>
-    {/each}
-  </ul>
-
-  <form on:submit|preventDefault={addItem}>
-    <label for="name">Add an item</label>
-    <input type="text" bind:value={name} />
-  </form>
 </div>
