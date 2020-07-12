@@ -33,6 +33,11 @@
           min-height: 500px;
         }
       }
+
+      .section {
+        padding-top: 4vw;
+        padding-bottom: 4vw;
+      }
     </style>
   </head>
   <body>
@@ -61,9 +66,13 @@
     <section class="container section" id="photos">
       <div class="row">
         <div class="col s12 l4">
-          <img src="img/portrait.jpg" alt="" class="responsive-img" />
+          <img
+            src="img/portrait.jpg"
+            alt=""
+            class="responsive-img materialboxed"
+          />
         </div>
-        <div class="col s12 l6">
+        <div class="col s12 l6 offset-l1">
           <h2 class="indigo-text text-darken-4">
             Portraits
           </h2>
@@ -76,10 +85,10 @@
         </div>
       </div>
       <div class="row">
-        <div class="col s12 l4">
-          <img src="img/city.jpg" alt="" class="responsive-img" />
+        <div class="col s12 l4 push-l7 offset-l1">
+          <img src="img/city.jpg" alt="" class="responsive-img materialboxed" />
         </div>
-        <div class="col s12 l6">
+        <div class="col s12 l6 pull-l5 right-align offset-l1">
           <h2 class="indigo-text text-darken-4">
             Cityscapes
           </h2>
@@ -93,9 +102,13 @@
       </div>
       <div class="row">
         <div class="col s12 l4">
-          <img src="img/nature.jpg" alt="" class="responsive-img" />
+          <img
+            src="img/nature.jpg"
+            alt=""
+            class="responsive-img materialboxed"
+          />
         </div>
-        <div class="col s12 l6">
+        <div class="col s12 l6 offset-l1">
           <h2 class="indigo-text text-darken-4">
             Nature
           </h2>
@@ -124,6 +137,7 @@
     <script>
       $(document).ready(function () {
         $(".sidenav").sidenav();
+        $(".materialboxed").materialbox();
       });
     </script>
   </body>
