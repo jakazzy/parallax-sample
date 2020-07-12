@@ -38,6 +38,13 @@
         padding-top: 4vw;
         padding-bottom: 4vw;
       }
+      .tabs .indicator {
+        background-color: #1a237e;
+      }
+      .tabs .tab a:focus,
+      .tabs .tab a:focus.active {
+        background: transparent;
+      }
     </style>
   </head>
   <body>
@@ -124,36 +131,61 @@
     <!-- parallax -->
     <div class="parallax-container">
       <div class="parallax">
-        <img src="img/stars.jpg" alt="" class="responsive-img" />
+        <img src="img/street.jpg" alt="" class="responsive-img" />
       </div>
     </div>
     <!-- services / tabs -->
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-    </div>
+    <section class="container section" id="services">
+      <div class="row">
+        <div class="col s12 l4">
+          <h2 class="indigo-text text-darken-4">
+            What I do...
+          </h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+          </p>
+        </div>
+        <div class="col s12 l6 offset-l2">
+          <ul class="tabs">
+            <li class="tab col s6">
+              <a href="#photography" class="indigo-text text-darken-4"
+                >Photography</a
+              >
+            </li>
+            <li class="tab col s6">
+              <a href="#editing" class="indigo-text text-darken-4">Editing</a>
+            </li>
+          </ul>
+          <div class="col s12" id="photography">
+            <p class="flow-text indigo-text text-darken-4">PHOTOGRAPHY</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+            </p>
+          </div>
+          <div class="col s12" id="editing">
+            <p class="flow-text indigo-text text-darken-4">EDITING</p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+            </p>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <!-- parallax -->
     <div class="parallax-container">
@@ -162,32 +194,62 @@
       </div>
     </div>
     <!-- contact form -->
-    <div class="container">
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus
-        ea quod dolor eos ut saepe consequuntur numquam. Minus eos, mollitia
-        doloremque, reprehenderit molestias asperiores ab quas expedita maiores,
-        rerum modi.
-      </p>
-    </div>
+    <section class="section container" id="contact">
+      <div class="row">
+        <div class="col s12 l5">
+          <h2 class="indigo-text text-darken-4">Get Intouch</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+            Voluptatibus ea quod dolor eos ut saepe consequuntur numquam.
+          </p>
+        </div>
+        <div class="col s12 l5 offset-l2">
+          <form>
+            <div class="input-field">
+              <i class="material-icons prefix">email</i>
+              <input type="email" id="email" />
+              <label for="email">Your Email</label>
+            </div>
+            <div class="input-field">
+              <i class="material-icons prefix">message</i>
+              <textarea
+                id="message"
+                class="materialize-textarea"
+                cols="30"
+                rows="10"
+              ></textarea>
+              <label for="message">Your message</label>
+            </div>
+            <div class="input-field">
+              <input type="text" id="date" class="datepicker" />
+              <label for="date">Choose a date you need for me...</label>
+            </div>
+            <div class="input-field">
+              <p>Services required...</p>
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Photography</span>
+                </label>
+              </p>
+              <p>
+                <label>
+                  <input type="checkbox" />
+                  <span>Editing</span>
+                </label>
+              </p>
+            </div>
+            <div class="input-field center">
+              <button class="btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
     <!-- footer -->
 
     <!-- Compiled and minified JavaScript -->
@@ -198,6 +260,10 @@
         $(".sidenav").sidenav();
         $(".materialboxed").materialbox();
         $(".parallax").parallax();
+        $(".tabs").tabs();
+        $(".datepicker").datepicker({
+          disableWeekends: true,
+        });
       });
     </script>
   </body>
